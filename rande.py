@@ -15,8 +15,14 @@ with codecs.open('name.txt','r',encoding='utf-8') as file:
     print("本轮奖池如下:\n")
     numb=len(name_list)
     print('共'+format(numb)+'人\n')
-    print(name_list)
-
+    for i in range(0,numb):
+        print('{:^3}'.format(name_list[i]),end='')
+        if (i+1)%10==0:
+            print("\n")
+        else:
+            print("\t",end='')
+            
+print("\n")
 #获取抽取人数
 eggs=eval(input("请输入抽取人数"))
 
