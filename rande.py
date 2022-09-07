@@ -2,8 +2,6 @@
 import random as r
 import time as time
 import codecs
-import os
-
 #开始时间
 startTime = time.localtime()
 startPerfCounter = time.perf_counter()
@@ -57,15 +55,28 @@ for i in range(eggs):
     print("{0:<10}\n".format(b))
 
 #打印次数和顺序
-#   print("{0:<10} {1:>5} 次\n".format(b,count))
+#    print("{0:<10} {1:>5} 次\n".format(b,count))
 
 #结束时间及时间统计
 Endtime = time.perf_counter()
 endPerfCounter = time.perf_counter()
 totalPerf = endPerfCounter - startPerfCounter
 endTime = time.localtime() 
-print("程序运行总时间是:{}秒".format(totalPerf))
+print("程序运行总时间是:{:.2f}秒".format(totalPerf))
 print('程序结束时间：',time.strftime('%Y-%m-%d %H:%M:%S',endTime))
 
+
+#自欺欺人进度条
+for i in range(20):
+    print("<",end = '',flush = True)
+    time.sleep(0.2)
+print("Holding",end = "")
+for i in range(20):
+    print(">",end = '',flush = True)
+    time.sleep(0.2)
+print("\n")
 #保持窗口
-ass=input("pause")
+ass=input(" ")
+ass=input(" ")
+ass=input("技术极其受限，所以记得截图保存结果")
+ass=input("再点窗口就没了")
